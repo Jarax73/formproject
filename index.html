@@ -17,28 +17,28 @@
 				<form method="post" action="#">
 					<p>
 						<label for="firstName">Prénom</label><br/>
-						<input type="text" name="firstName" id="firstName"/><br/>
+						<input type="text" name="firstName" id="firstName" required/><br/>
 						<label for="lastName">Nom</label><br/>
-						<input type="text" name="lastName" id="lastName"/><br/>
+						<input type="text" name="lastName" id="lastName"required/><br/>
 						<label for="group">Groupe</label><br/>
 						<select name="group" id="group">
-							<option value="developpement-web">Développement Web</option>
-							<option value="marketing-digital">Spécialiste Marketing Digital</option>
-							<option value="equipe-pedagogique">Equipe pédagogique</option>
+							<option>Développement Web</option>
+							<option>Spécialiste Marketing Digital</option>
+							<option>Equipe pédagogique</option>
 						</select><br/>
 						<label for="bio">Bio</label><br/>
 						<textarea name="bio" id="bio"></textarea><br/>
-						<input type="file" name="photo" id="photo" accept=".jpg,.jpeg,.png"/><br/>
+						<input type="file" name="photo" id="photo" accept=".jpg,.jpeg,.png" required/><br/>
 						<div id="button-form">
-							<input type="submit" value="Créer"/>
+							<input type="submit" value="Créer" id="envoi" onchange="handleFiles(this.files)"/>
 						<input type="reset" value="Réinit."/>
 						</div>
 					</p>
 				</form>
 			</div>
 			<div id="contact-list">
-				<h1 class="section-title">Liste de contact</h1>
-				<p id="toRemove">Vide</p>
+				<h1 class="section-title unique" >Liste de contact</h1>
+				
 			</div>
 		</div>		
 	</section>

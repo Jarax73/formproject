@@ -10,7 +10,6 @@ html, body
 }
 section
 {
-	display: grid;
 	width: 100%;
 }
 #main-contact
@@ -21,30 +20,52 @@ section
 }
 #contact-form
 {
+	background-color: #f2f2f2;
+	color: #2080d9;
 	width: 100%;
 	max-width: 500px;
 	margin: 5px;
-	height: 100%;
+	height: 700px;
 	border: 1px solid #2080d9;
 }
 #contact-list
 {
 	display: none;
+	position: relative;
+	overflow: scroll;
+	background-color: #f2f2f2;
 	width: 100%;
+	height: 700px;
 	max-width: 500px;
 	margin: 5px;
 	border: 1px solid #2080d9;
 }
-#contact-list p
+
+.bloc-contact
 {
-	text-align: center;
-	margin-top: 50%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-bottom: 1px solid #2080d9;
+}
+.info-list
+{
+	width: 100%;
+	padding: 5px;
+}
+.info
+{
+	width: 90%;
+}
+.fermeture img
+{
+	width: 15%;
 }
 h1
 {
 	background-color: #2080d9;
 	color: #fff;
-
+	
 }
 #general-title
 {
@@ -54,9 +75,15 @@ h1
 }
 .section-title
 {
+	
 	text-align: center;
 	height: 40px;
 	padding-top: 10px;
+}
+.unique
+{
+/* 	position: sticky; */
+	width: 100%;
 }
 form
 {
@@ -74,13 +101,19 @@ input, select
 	margin-bottom: 10px;
 	padding: 7px;
 	box-sizing: border-box ;
-	
+	border: 1px solid #f2f2f2;
+}
+select
+{
+	background-color: #fff;
 }
 textarea
 {
 	width: 100%;
 	height: 100px;
-	
+	padding: 5px;
+	box-sizing: border-box;
+	border: 1px solid #f2f2f2;
 }
 #photo
 {
@@ -99,8 +132,4 @@ textarea
 [type="reset"]
 {
 	background-color: red;
-}
-select
-{
-	appearance: #2080d9 ;
 }
