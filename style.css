@@ -40,26 +40,36 @@ section
 	margin: 5px;
 	border: 1px solid #2080d9;
 }
-
-.bloc-contact
+#styliser
+{
+	display: flex;
+	flex-direction: column;
+}
+#bloc-contact
 {
 	display: flex;
 	flex-direction: row;
+	position: relative;
 	justify-content: space-between;
 	border-bottom: 1px solid #2080d9;
 }
 .info-list
 {
-	width: 100%;
+	
+	width:;
 	padding: 5px;
 }
 .info
 {
-	width: 90%;
+	width: ;
+	flex: 2;
 }
-.fermeture img
+#fermeture img
 {
-	width: 15%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 3%;
 }
 h1
 {
@@ -89,10 +99,16 @@ form
 {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	justify-content: ;
+	align-items: ;
 	padding-top: 40px;
 	
+}
+form p
+{
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
 }
 input, select
 {
@@ -115,9 +131,15 @@ textarea
 	box-sizing: border-box;
 	border: 1px solid #f2f2f2;
 }
+.photo img
+{
+	width: 120px;
+	padding: 5px;
+	border-radius : 50%;
+}
 #photo
 {
-	height: 100px;
+	height: 120px;
 }
 #button-form 
 {
@@ -125,11 +147,20 @@ textarea
 	flex-direction: row;
 	justify-content: space-between;
 }
+#button-form input
+{
+	width: 150px;
+	box-shadow: 0px -1px 5px 0px #000;
+	margin-left: 12%;
+	;
+}
 [type="submit"]
 {
 	background-color: #2080d9;
+	border: 1px solid #2080d9;
 }
 [type="reset"]
 {
 	background-color: red;
+	border: 1px solid red;
 }

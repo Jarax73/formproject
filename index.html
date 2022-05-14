@@ -14,7 +14,7 @@
 		<div id="main-contact">
 			<div id="contact-form">
 				<h1 class="section-title">Formulaire de contact</h1>
-				<form method="post" action="#">
+				<form enctype="multipart/form-data" method="post" action="#">
 					<p>
 						<label for="firstName">Prénom</label><br/>
 						<input type="text" name="firstName" id="firstName" required/><br/>
@@ -28,9 +28,10 @@
 						</select><br/>
 						<label for="bio">Bio</label><br/>
 						<textarea name="bio" id="bio"></textarea><br/>
-						<input type="file" name="photo" id="photo" accept=".jpg,.jpeg,.png" required/><br/>
+						<p class="photo">
+						<input type="file" name="photo" id="photo" accept=".jpg,.jpeg,.png" required/><br/><img class="image-contact"/></p>
 						<div id="button-form">
-							<input type="submit" value="Créer" id="envoi" onchange="handleFiles(this.files)"/>
+							<input type="submit" value="Créer" id="envoi"/>
 						<input type="reset" value="Réinit."/>
 						</div>
 					</p>
