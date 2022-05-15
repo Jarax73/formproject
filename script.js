@@ -1,11 +1,12 @@
-const divContacts = document.createElement("div");
-divContacts.setAttribute("id", "styliser");
+let divContacts = document.createElement("div");
+divContacts.setAttribute("class", "styliser");
 const mainSection = document.querySelector("#contact-list");
+mainSection.appendChild(divContacts);
 const form = document.querySelector("form");
-const paragraph = document.createElement('p');
+/* const paragraph = document.createElement('p');
 const divUnique = document.createElement('div');
 
-divUnique.setAttribute("id", "bloc-contact");
+divUnique.setAttribute("id", "bloc-contact");*/
 
 form.addEventListener("submit", function(event){
 	event.preventDefault();
@@ -27,7 +28,7 @@ form.addEventListener("submit", function(event){
 	const file = event.target.photo.files[0];
 	const name = URL.createObjectURL(file);
 
-	const photoContact = document.createElement("p");
+/*	const photoContact = document.createElement("p");
 	photoContact.setAttribute("class", "photo");
 	const imageContact = document.createElement("img");
 	imageContact.setAttribute("src", name);
@@ -41,44 +42,59 @@ form.addEventListener("submit", function(event){
 	divInfo.appendChild(nomsContact);
 	divInfo.appendChild(groupContact);
 	divInfo.appendChild(infoContact);
-	const closeP = document.createElement('p');
+	 const closeP = document.createElement('p');
 	const link = document.createElement('a')
 	link.setAttribute("id", "fermeture");
 	const imageClose = document.createElement('img');
 	imageClose.setAttribute("src", "croix.png");
 	link.appendChild(imageClose);
 	closeP.appendChild(link);
-
-	divUnique.appendChild(photoContact);
+divContacts.appendChild(closeP);
+	/*divUnique.appendChild(photoContact);
 	divUnique.appendChild(divInfo);
 	divUnique.appendChild(closeP);
 	divContacts.appendChild(divUnique);
+	*/
+	
+	 divContacts.innerHTML += `<div class="bloc-contact">
+															<div class="event">
+	 														<p class="photo"><img src="${name}" alt="Photo de ${prenom}"/></p>
+	 														<div class="info">
+	 															<h2> ${prenom} ${nom} </h2>
+																<h3>${groupe}</h3>
+	 															<p class="info-list">${info}</p>
+	 														</div>
+															</div>
+	 														<p><a class="fermeture"><img src="croix.png"></a></p>
+	 													</div>`;
 
-	
-	// divContacts.innerHTML += `<div class="bloc-contact">
-	// 														<p class="photo"><img  alt="Photo de ${prenom}"/></p>
-	// 														<div class="info">
-	// 															<p class="info-list"> ${prenom} ${nom} <br/>${groupe}</p>
-	// 															<p class="info-list">${info}</p>
-	// 														</div>
-	// 														<p class="fermeture"><img src="croix.png" /><p>
-	// 													</div>`;
-	
-	nomsContact.textContent = `${prenom} ${nom}`;
+	const blocContact = document.querySelector(".bloc-contact");
+	console.log(divContacts);
+/*nomsContact.textContent = `${prenom} ${nom}`;
 	groupContact.textContent = groupe;
 	infoContact.textContent = info;
+	*/
 	
-	
-	
-	divUnique.addEventListener('click', () => {
+	const divEvent = document.querySelector(".event");
+	divEvent.addEventListener('click', () => {
 		console.log("ça marche");
-		divUnique.remove();
+		// divUnique.remove();
+		event.target.firstName.value = prenom;
+	event.target.lastName.value	= nom  ;
+	event.target.group.value = groupe;
+	event.target.bio.value = info ;
+	//  = file ;
+	event.target.photo.files[0] = name ;
+		
 	})
+	const closeP = document.querySelector(".fermeture");
+closeP.addEventListener("click", () => blocContact.remove());
+
 	// blocContact.addEventListener("click", function(){
 	// 	blocContact.remove();
 	// })
 	
-	mainSection.appendChild(divContacts);
+	
 	const infoList = document.getElementsByClassName("info-list");
 	mainSection.style.display = "block";
 	form.reset();
