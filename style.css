@@ -44,7 +44,7 @@ section
 {
 	position: relative;
 }
-.bloc-contact
+#bloc-contact
 {
 	display: flex;
 	flex-direction: row;
@@ -52,7 +52,7 @@ section
 	justify-content: space-between;
 	border-bottom: 1px solid #2080d9;
 }
-.event
+#event
 {
 	display: flex;
 	flex-direction: row;
