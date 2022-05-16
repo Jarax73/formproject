@@ -40,35 +40,36 @@ section
 	margin: 5px;
 	border: 1px solid #2080d9;
 }
-#styliser
+/* #styliser */
 {
+	display: flex;
+	flex-direction: column;
 	position: relative;
 }
 #bloc-contact
 {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	position: relative;
 	justify-content: space-between;
-	border-bottom: 1px solid #2080d9;
+	
 }
-#event
+.event
 {
 	display: flex;
 	flex-direction: row;
+	position: relative;
+	border-bottom: 1px solid #2080d9;
 }
 .info-list
 {
-	
-	width:;
 	padding: 5px;
 }
 .info
 {
-	width: ;
-	flex: 1;
+	flex: 2;
 }
-.fermeture img
+#fermeture img
 {
 	position: absolute;
 	top: 0;
