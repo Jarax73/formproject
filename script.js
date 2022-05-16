@@ -1,5 +1,5 @@
 let divContacts = document.createElement("div");
-divContacts.setAttribute("class", "styliser");
+divContacts.setAttribute("class", "bloc-contact");
 const mainSection = document.querySelector("#contact-list");
 mainSection.appendChild(divContacts);
 const form = document.querySelector("form"); 
@@ -7,7 +7,7 @@ const form = document.querySelector("form");
 const paragraph = document.createElement('p');
 const divUnique = document.createElement('div');
 
-divUnique.setAttribute("id", "bloc-contact");
+// divUnique.setAttribute("id", "bloc-contact");
 
 form.addEventListener("submit", function(event){
 	event.preventDefault();
@@ -58,31 +58,13 @@ form.addEventListener("submit", function(event){
 	closeP.append(link);
 	
 	divEvent.append(closeP);
-	divUnique.append(divEvent);
+	divContacts.append(divEvent);
 	
-	divContacts.append(divUnique);
-	
-	
-	 // divContacts.innerHTML += `<div class="bloc-contact">
-		// 													<div class="event">
-	 // 														<p class="photo"><img src="${name}" alt="Photo de ${prenom}"/></p>
-	 // 														<div class="info">
-	 // 															<h2> ${prenom} ${nom} </h2>
-		// 														<h3>${groupe}</h3>
-	 // 															<p class="info-list">${info}</p>
-	 // 														</div>
-		// 													</div>
-	 // 														<p><a class="fermeture"><img src="croix.png"></a></p>
-	 // 													</div>`;
-
-	// const blocContact = document.querySelector(".bloc-contact");
 	console.log(mainSection);
 	nomsContact.textContent = `${prenom} ${nom}`;
 	groupContact.textContent = groupe;
 	infoContact.textContent = info;
 	
-	
-	// const divEvent = document.querySelector(".event");
 	divInfo.addEventListener('click', () => {
 		console.log("ça marche");
 		event.target.firstName.value = prenom;
@@ -92,12 +74,12 @@ form.addEventListener("submit", function(event){
 		event.target.photo.files[0] = name ;
 		
 	})
-	// const closeP = document.querySelector(".fermeture");
 closeP.addEventListener("click", () => divEvent.remove());
-
-	// blocContact.addEventListener("click", function(){
-	// 	blocContact.remove();
-	// })
+const eventFile = document.querySelector("#event-file");
+	eventFile.addEventListener('click', function(){
+		const imageSource = document.querySelector("#photo");
+		imageSource.setAttribute("src", name);
+	})
 	
 	
 	const infoList = document.getElementsByClassName("info-list");

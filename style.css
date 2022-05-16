@@ -10,16 +10,23 @@ html, body
 }
 section
 {
+	position: ;
 	width: 100%;
+}
+#principal-header
+{
+	position: ;
 }
 #main-contact
 {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	margin-top: 30px;
 }
 #contact-form
 {
+	position: relative;
 	background-color: #f2f2f2;
 	color: #2080d9;
 	width: 100%;
@@ -40,25 +47,22 @@ section
 	margin: 5px;
 	border: 1px solid #2080d9;
 }
-/* #styliser */
-{
-	display: flex;
-	flex-direction: column;
-	position: relative;
-}
-#bloc-contact
+
+.bloc-contact
 {
 	display: flex;
 	flex-direction: column;
 	position: relative;
 	justify-content: space-between;
-	
+	border-right: 1px solid #2080d9;	
+	margin-top: ;
 }
 .event
 {
 	display: flex;
 	flex-direction: row;
 	position: relative;
+	background: #ffffff;
 	border-bottom: 1px solid #2080d9;
 }
 .info-list
@@ -88,6 +92,12 @@ h1
 	padding-top: 15px;
 	padding-left: 20px;
 }
+#contact-list header, #contact-form header
+{
+	width: 100%;
+	max-width: 500px;
+	position: sticky;
+}
 .section-title
 {
 	
@@ -95,11 +105,7 @@ h1
 	height: 40px;
 	padding-top: 10px;
 }
-.unique
-{
-/* 	position: sticky; */
-	width: 100%;
-}
+
 form
 {
 	display: flex;
@@ -107,7 +113,7 @@ form
 	justify-content: ;
 	align-items: ;
 	padding-top: 40px;
-	
+	margin-top: 20px;
 }
 form p
 {

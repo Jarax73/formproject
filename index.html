@@ -10,10 +10,14 @@
 
 <body>
   <section>
-		<h1 id="general-title">Répertoire de contact</h1>
+		<header id="principal-header">
+			<h1 id="general-title">Répertoire de contact</h1>
+		</header>
 		<div id="main-contact">
 			<div id="contact-form">
-				<h1 class="section-title">Formulaire de contact</h1>
+				<header>
+					<h1 class="section-title">Formulaire de contact</h1>
+				</header>
 				<form enctype="multipart/form-data" method="post" action="#">
 					<p>
 						<label for="firstName">Prénom</label><br/>
@@ -28,7 +32,7 @@
 						</select><br/>
 						<label for="bio">Bio</label><br/>
 						<textarea name="bio" id="bio"></textarea><br/>
-						<p class="photo">
+						<p id="event-file">
 						<input type="file" name="photo" id="photo" accept=".jpg,.jpeg,.png" required/><br/><img class="image-contact"/></p>
 						<div id="button-form">
 							<input type="submit" value="Créer" id="envoi"/>
@@ -38,8 +42,9 @@
 				</form>
 			</div>
 			<div id="contact-list">
-				<h1 class="section-title unique" >Liste de contact</h1>
-				
+				<header>
+					<h1 class="section-title" >Liste de contact</h1>
+				</header>
 			</div>
 		</div>		
 	</section>
