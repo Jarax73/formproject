@@ -10,13 +10,9 @@ html, body
 }
 section
 {
-	position: ;
 	width: 100%;
 }
-#principal-header
-{
-	position: ;
-}
+
 #main-contact
 {
 	display: flex;
@@ -47,15 +43,13 @@ section
 	margin: 5px;
 	border: 1px solid #2080d9;
 }
-
 .bloc-contact
 {
 	display: flex;
 	flex-direction: column;
 	position: relative;
 	justify-content: space-between;
-	border-right: 1px solid #2080d9;	
-	margin-top: ;
+	border-right: 1px solid #2080d9;
 }
 .event
 {
@@ -84,7 +78,6 @@ h1
 {
 	background-color: #2080d9;
 	color: #fff;
-	
 }
 #general-title
 {
@@ -100,18 +93,14 @@ h1
 }
 .section-title
 {
-	
 	text-align: center;
 	height: 40px;
 	padding-top: 10px;
 }
-
 form
 {
 	display: flex;
 	flex-direction: column;
-	justify-content: ;
-	align-items: ;
 	padding-top: 40px;
 	margin-top: 20px;
 }
@@ -163,7 +152,6 @@ textarea
 	width: 150px;
 	box-shadow: 0px -1px 5px 0px #000;
 	margin-left: 12%;
-	;
 }
 [type="submit"]
 {
