@@ -72,8 +72,8 @@ form.addEventListener("submit", function(event){
 			divEvent.textContent = nom;
 			divEvent.textContent = groupe;
 			divEvent.textContent = info;
-			divEvent.textContent = file;
-			divEvent.textContent = name;
+			// divEvent.textContent = file;
+			// divEvent.textContent = name;
 		})
 	})
 	closeP.addEventListener("click", () => divEvent.remove());
@@ -85,6 +85,6 @@ form.addEventListener("submit", function(event){
 	
 	const infoList = document.getElementsByClassName("info-list");
 	mainSection.style.display = "block";
-	previewPicture().remove();
+	imagePreview.src = "";
 	form.reset();
 });
