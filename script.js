@@ -1,12 +1,19 @@
 let divContacts = document.createElement("div");
 divContacts.setAttribute("class", "bloc-contact");
+let imagePreview = document.querySelector('.image-contact');
 const mainSection = document.querySelector("#contact-list");
 mainSection.appendChild(divContacts);
 const form = document.querySelector("form"); 
 const paragraph = document.createElement('p');
 const submitButton = document.querySelector("[type='submit']");
 
-
+let previewPicture = function (e){
+	const [picture] = e.files;
+	if(picture){
+		imagePreview.src = URL.createObjectURL(picture);
+	}
+}
+	
 form.addEventListener("submit", function(event){
 	event.preventDefault();
 
@@ -16,7 +23,7 @@ form.addEventListener("submit", function(event){
 	let info = event.target.bio.value;
 	let file = event.target.photo.files[0];
 	let name = URL.createObjectURL(file);
-
+	
 	const photoContact = document.createElement("p");
 	photoContact.setAttribute("class", "photo");
 	const imageContact = document.createElement("img");
@@ -61,12 +68,12 @@ form.addEventListener("submit", function(event){
 		event.target.photo.files[0] = name;
 		form.addEventListener("submit", function (e) {
 			e.preventDefault();
-			divEvent.innerHTML = prenom;
-			divEvent.innerHTML = nom;
-			divEvent.innerHTML = groupe;
-			divEvent.innerHTML = info;
-			divEvent.innerHTML = file;
-			divEvent.innerHTML = name;
+			divEvent.textContent = prenom;
+			divEvent.textContent = nom;
+			divEvent.textContent = groupe;
+			divEvent.textContent = info;
+			divEvent.textContent = file;
+			divEvent.textContent = name;
 		})
 	})
 	closeP.addEventListener("click", () => divEvent.remove());
@@ -78,5 +85,6 @@ form.addEventListener("submit", function(event){
 	
 	const infoList = document.getElementsByClassName("info-list");
 	mainSection.style.display = "block";
+	previewPicture().remove();
 	form.reset();
 });
