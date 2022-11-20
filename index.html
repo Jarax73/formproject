@@ -29,11 +29,12 @@
 							<option>Développement Web</option>
 							<option>Spécialiste Marketing Digital</option>
 							<option>Equipe pédagogique</option>
-						</select><br/>
+						</select>
+						<br/>
 						<label for="bio">Bio</label><br/>
 						<textarea name="bio" id="bio"></textarea><br/>
 						<p id="event-file">
-						<input type="file" name="photo" id="photo" onchange="previewPicture(this)" required/><br/><img class="image-contact"/></p>
+						<input type="file" name="photo" id="photo" onchange="previewPicture(this, imagePreview)" required/><br/><img class="image-contact"/></p>
 						<div id="button-form">
 							<input type="submit" value="Créer" id="envoi"/>
 						<input type="reset" value="Réinit."/>
