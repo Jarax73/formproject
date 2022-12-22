@@ -25,3 +25,11 @@ exports.getContact = (request, response) => {
         .then(contact => response.status(200).json({ contact }))
         .catch((error) => response.status(500).json({ error }))
 };
+
+exports.updateContact = (request, response) => {
+    Contact.updateOne({ _id: request.params.id }, { ...request.body, _id: request.params.id })
+        .then(() => {
+            response.status(200).json({ message: "Contact Updated" });
+        })
+        .catch((error) => response.status(401).json({ error }));
+}
