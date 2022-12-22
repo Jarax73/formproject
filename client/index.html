@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <section>
+		<header id="principal-header">
+			<h1 id="general-title">Répertoire de contact</h1>
+		</header>
+		<div id="main-contact">
+			<div id="contact-form">
+				<header>
+					<h1 class="section-title">Formulaire de contact</h1>
+				</header>
+				<form enctype="multipart/form-data" method="post" action="#">
+					<p>
+						<label for="firstName">Prénom</label><br/>
+						<input type="text" name="firstName" id="firstName" required/><br/>
+						<label for="lastName">Nom</label><br/>
+						<input type="text" name="lastName" id="lastName"required/><br/>
+						<label for="group">Groupe</label><br/>
+						<select name="group" id="group">
+							<option>Développement Web</option>
+							<option>Spécialiste Marketing Digital</option>
+							<option>Equipe pédagogique</option>
+						</select>
+						<br/>
+						<label for="bio">Bio</label><br/>
+						<textarea name="bio" id="bio"></textarea><br/>
+						<p id="event-file">
+						<input type="file" name="photo" id="photo" onchange="previewPicture(this, imagePreview)" required/><br/><img class="image-contact"/></p>
+						<div id="button-form">
+							<input type="submit" value="Créer" id="envoi"/>
+						<input type="reset" value="Réinit."/>
+						</div>
+					</p>
+				</form>
+			</div>
+			<div id="contact-list">
+				<header>
+					<h1 class="section-title" >Liste de contact</h1>
+				</header>
+			</div>
+		</div>		
+	</section>
+  <script src="script.js"></script>
+</body>
+
+</html>
