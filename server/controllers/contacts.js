@@ -13,3 +13,9 @@ exports.createContact = (request, response) => {
             response.status(400).json({ error });
         });
 };
+
+exports.getContacts = (request, response) => {
+    Contact.find()
+    .then(contacts => response.status(200).json({ contacts }))
+    .catch((error) => response.status(400).json({ error }));
+}
