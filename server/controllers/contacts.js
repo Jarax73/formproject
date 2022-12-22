@@ -33,3 +33,11 @@ exports.updateContact = (request, response) => {
         })
         .catch((error) => response.status(401).json({ error }));
 }
+
+exports.deleteContact = (request, response) => {
+    Contact.deleteOne({ _id: request.params.id })
+        .then(() => {
+            response.status(200).json({ message: "Contact Deleted" });
+        })
+        .catch((error) => response.status(401).json({ error }));
+};
