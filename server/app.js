@@ -1,7 +1,10 @@
 const http = require('http');
 const express = require('express');
 const mongoose = require("mongoose");
-const contactRoutes = require("./routes/contacts")
+const contactRoutes = require("./routes/contacts");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 const app = express();
 
@@ -12,7 +15,7 @@ app.use(express.json());
 
 
 mongoose
-    .connect("mongodb+srv://Jared:KgFgu6Uh5T5C*wp@cluster0.wc2vosj.mongodb.net/test?retryWrites=true&w=majority")
+    .connect(process.env.MONGOOSE_CONNECTION)
     .then(() => console.log("Connexion à MongoDB réussie !"))
     .catch(() => console.log("Connexion à MongoDB échouée !"));
 
